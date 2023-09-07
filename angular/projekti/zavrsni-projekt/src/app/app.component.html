@@ -1,0 +1,16 @@
+<a routerLink="/pocetna" (click)="putanja='pocetna'" class="logo">Menza-Review</a>
+<nav class="navigation">
+  <a routerLink="/pocetna" (click)="putanja='pocetna'">Dnevni meniji</a> <br>
+  <a *ngIf="korisniciServis.prijavljeniKorisnik != null" routerLink="/proizvodi" (click)="putanja='proizvodi'">Proizvodi</a>
+  <a *ngIf="korisniciServis.prijavljeniKorisnik != null" routerLink="/meniji" (click)="putanja='meniji'">Meniji</a>
+  <a *ngIf="korisniciServis.prijavljeniKorisnik != null && korisniciServis.prijavljeniKorisnik.uloga_id==1" routerLink="/dodajNovo" (click)="putanja='dodajNovo'">Dodaj novo</a>
+  <a *ngIf="korisniciServis.prijavljeniKorisnik != null && korisniciServis.prijavljeniKorisnik.uloga_id==1" routerLink="/odobriRecenziju" (click)="putanja='odobriRecenziju'">Odobri recenziju</a>
+  <a *ngIf="korisniciServis.prijavljeniKorisnik != null && korisniciServis.prijavljeniKorisnik.uloga_id==1" routerLink="/aktivacija" (click)="putanja='aktivacija'">Aktivacija</a>
+  <a *ngIf="korisniciServis.prijavljeniKorisnik == null" routerLink="/prijava" (click)="putanja='prijava'">Prijava</a> 
+  <a *ngIf="korisniciServis.prijavljeniKorisnik == null" routerLink="/registracija" (click)="putanja='registracija'">Registracija</a>
+  <a *ngIf="this.korisniciServis.prijavljeniKorisnik != null" routerLink="/pocetna" (click)="odjaviSe()">Odjava</a>
+</nav>
+<main>
+  <router-outlet></router-outlet>
+</main>
+<footer>Lovro Pejaković &copy; 2023</footer>

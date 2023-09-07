@@ -1,0 +1,67 @@
+#meniji {
+	max-width: 1270px;
+	margin: 30px auto;
+	width: 100%;
+}
+.pregled-traka {
+	width: 100%;
+	padding: 10px 0px;
+	background-color: rgb(55,55,57);
+	border: 1px solid #161616;
+}
+
+.pregled-traka h1 {
+    color: #dadada;
+    font-size: 1.3rem;
+    font-weight: 500;
+    padding-left: 20px;
+}
+
+.container {
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr 1fr;
+	grid-gap: 35px;
+	margin: 20px 0px;
+}
+
+.meni {
+	width: 100%;
+	height: 340px;
+	overflow: hidden;
+	background-color: rgb(16,16,17);
+	border: 1px solid #161616;
+	position: relative;
+}
+
+.slika {
+    width: 100%;
+    height: 60%;
+}
+
+.slika img {
+    width: 100%;
+    height: 100%;
+    object-position: top center;
+    object-fit: cover;
+}
+  
+.link {
+	margin: 10px 0px 0 0;
+	text-align: left;
+}
+
+.link a {
+    font-size: 1rem;
+    font-weight: 400;
+    color: #dfe2db;
+    text-decoration: none;
+}
+.link a span {
+    padding-left: 10px;
+}
+
+.link a:hover {
+    font-size: 1.2rem;
+    transition: all ease 0.3s;
+    color: #a50113;
+}

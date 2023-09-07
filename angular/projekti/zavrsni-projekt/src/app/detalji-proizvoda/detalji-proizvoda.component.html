@@ -1,0 +1,166 @@
+<div class="container">
+  <div class='glavniDio'>
+    <div class='lijeviDio'>
+      <img id="slika" src=''>
+    </div>
+    <div class='desniDio'>
+      <h2 id="naziv"></h2>
+      <div class='detalji'>
+        <ul>
+          <li id="opis"></li>
+          <li id="prosjecnaOcjena">{{prosjecnaRecenzija}}/10</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  
+  <div class="nutricionistickeVrijednosti">
+    <table border="1px" class="table" *ngIf="nutrijenti">
+      <tr><th>Nutrijent</th><th>Količina</th></tr>
+      <tr>
+        <td>Kalorije</td>
+        <td>{{nutrijenti.kalorije.toFixed(2)}} kcal</td>
+      </tr>
+      <tr>
+        <td>Masti<br>od kojih zasićenih masnih kiselina</td>
+        <td>{{nutrijenti.masti.toFixed(2)}} g <br> {{nutrijenti.zasicene_masti.toFixed(2)}} g </td>
+      </tr>
+      <tr>
+        <td>Ugljikohidrati</td>
+        <td>{{nutrijenti.ugljikohidrati.toFixed(2)}} g</td>
+      </tr>
+      <tr>
+        <td>Vlakna</td>
+        <td>{{nutrijenti.vlakna.toFixed(2)}} g</td>
+      </tr>
+      <tr>
+        <td>Šećeri</td>
+        <td>{{nutrijenti.seceri.toFixed(2)}} g</td>
+      </tr>
+      <tr>
+        <td>Proteini</td>
+        <td>{{nutrijenti.protein.toFixed(2)}} g</td>
+      </tr>
+      <tr>
+        <td>Kolesterol</td>
+        <td>{{nutrijenti.kolesterol.toFixed(2)}} g</td>
+      </tr>
+      <tr>
+        <td>Voda</td>
+        <td>{{nutrijenti.voda.toFixed(2)}} g</td>
+      </tr>
+    </table>
+  
+    <table border="1px" class="table" *ngIf="nutrijenti">
+      <tr><th>Nutrijent</th><th>Količina</th></tr>
+      <tr>
+        <td>Natrij</td>
+        <td>{{nutrijenti.natrij.toFixed(2)}} mg</td>
+      </tr>
+      <tr>
+        <td>Kalcij</td>
+        <td>{{nutrijenti.kalcij.toFixed(2)}} mg</td>
+      </tr>
+      <tr>
+        <td>Magnezij</td>
+        <td>{{nutrijenti.magnezij.toFixed(2)}} mg</td>
+      </tr>
+      <tr>
+        <td>Željezo</td>
+        <td>{{nutrijenti.zeljezo.toFixed(2)}} mg</td>
+      </tr>
+      <tr>
+        <td>Kalij</td>
+        <td>{{nutrijenti.kalij.toFixed(2)}} mg</td>
+      </tr>
+      <tr>
+        <td>Cink</td>
+        <td>{{nutrijenti.cink.toFixed(2)}} mg</td>
+      </tr>
+      <tr>
+        <td>Fosfor</td>
+        <td>{{nutrijenti.fosfor.toFixed(2)}} mg</td>
+      </tr>
+    </table>
+  
+    <table border="1px" class="table" *ngIf="nutrijenti">
+      <tr><th>Nutrijent</th><th>Količina</th></tr>
+      <tr>
+        <td>Vitamin A</td>
+        <td>{{nutrijenti.vitamin_A.toFixed(2)}} μg</td>
+      </tr>
+      <tr>
+        <td>Vitamin C</td>
+        <td>{{nutrijenti.vitamin_C.toFixed(2)}} mg</td>
+      </tr>
+      <tr>
+        <td>Vitamin B1</td>
+        <td>{{nutrijenti.vitamin_B1.toFixed(2)}} mg</td>
+      </tr>
+      <tr>
+        <td>Vitamin B2</td>
+        <td>{{nutrijenti.vitamin_B2.toFixed(2)}} mg</td>
+      </tr>
+      <tr>
+        <td>Vitamin B3</td>
+        <td>{{nutrijenti.vitamin_B3.toFixed(2)}} mg</td>
+      </tr>
+      <tr>
+        <td>Vitamin B6</td>
+        <td>{{nutrijenti.vitamin_B6.toFixed(2)}} mg</td>
+      </tr>
+      <tr>
+        <td>Vitamin B9</td>
+        <td>{{nutrijenti.vitamin_B9.toFixed(2)}} μg</td>
+      </tr>
+      <tr>
+        <td>Vitamin B12</td>
+        <td>{{nutrijenti.vitamin_B12.toFixed(2)}} μg</td>
+      </tr>
+      <tr>
+        <td>Vitamin D</td>
+        <td>{{nutrijenti.vitamin_D.toFixed(2)}} μg</td>
+      </tr>
+      <tr>
+        <td>Vitamin E</td>
+        <td>{{nutrijenti.vitamin_E.toFixed(2)}} mg</td>
+      </tr>
+      <tr>
+        <td>Vitamin K</td>
+        <td>{{nutrijenti.vitamin_K.toFixed(2)}} μg</td>
+      </tr>
+    </table>
+  </div>
+  
+  <div>
+  
+    <button id="otvoriPolje" name="otvoriPolje" type="submit" value="otvoriPolje" (click)="otvoriPolje($event)">Recenziraj</button>
+  
+      <div class="forma" id="novaRecenzija">
+        <h2 class="naslov">Nova recenzija</h2>
+        <form>
+          <input type="text" name="ocjena" id="ocjena" placeholder="ocjena(1-10)"/>
+          <textarea  name="sadrzaj" id="sadrzaj" placeholder="tekst recenzije"></textarea>
+          <label for="imageInput" class="odaberi-datoteku-label">Odaberi sliku</label>
+            <input type="file" id="imageInput" accept="image/*" placeholder="Odaberi sliku">
+            <label for="videoInput" class="odaberi-datoteku-label">Odaberi video</label>
+          <input type="file" id="videoInput" accept="video/*" placeholder="Odaberi video">
+          <button id="Pohrani" name="Pohrani" type="submit" value="Pohrani" (click)="PohraniRecenziju($event)">Pohrani</button><br>
+        </form> 
+    </div>
+    <div class="pregled-traka">
+        <h1>Recenzije</h1>
+    </div>
+    <div class="recenzije">
+    <div *ngFor="let r of recenzije">
+      <img *ngIf="r.slika" [id]="r.slika" [src]="r.slikaSrc">
+      <video *ngIf="r.video" [id]="r.video" [src]="r.videoSrc" controls></video>
+      <p>{{r.ocjena}}</p>
+      <p>{{r.sadrzaj}}</p>
+      <p>{{parseDate(r.datum_vrijeme) | date:'dd.M.yyyy HH:mm'}}</p>
+      <p>korisnik: {{r.korime}}</p>
+    </div>
+  </div>
+  </div>
+    
+  </div>

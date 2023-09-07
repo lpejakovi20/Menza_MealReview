@@ -1,0 +1,48 @@
+<div class="container">
+  <div class='glavniDio'>
+      <div class='lijeviDio'>
+        <img id="slika" src=''>
+      </div>
+      <div class='desniDio'>
+        <h2 id="naziv">Naziv</h2>
+        <div class='detalji'>
+          <ul>
+            <li id="opis">opis</li>
+            <li id="prosjecnaOcjena">{{prosjecnaRecenzija}}/10</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  
+    <div>
+      <button id="otvoriPolje" name="otvoriPolje" type="submit" value="otvoriPolje" (click)="otvoriPolje($event)">Napiši recenziju</button>
+  
+        <div class="forma" id="novaRecenzija">
+          <h2 class="naslov">Nova recenzija</h2>
+          <form>
+            <input type="text" name="ocjena" id="ocjena" placeholder="ocjena(1-10)"/>
+            <textarea  name="sadrzaj" id="sadrzaj" placeholder="tekst recenzije"></textarea>
+            <label for="imageInput" class="odaberi-datoteku-label">Odaberi sliku</label>
+            <input type="file" id="imageInput" accept="image/*" placeholder="Odaberi sliku">
+            <label for="videoInput" class="odaberi-datoteku-label">Odaberi video</label>
+            <input type="file" id="videoInput" accept="video/*" placeholder="Odaberi video">
+            <button id="Pohrani" name="Pohrani" type="submit" value="Pohrani" (click)="PohraniRecenziju($event)">Pohrani</button><br>
+          </form> 
+      </div>
+  
+      <div class="pregled-traka">
+      <h1>Recenzije</h1>
+    </div>
+    <div class="recenzije">
+      <div *ngFor="let r of recenzije">
+        <img *ngIf="r.slika" [id]="r.slika" [src]="r.slikaSrc">
+        <video *ngIf="r.video" [id]="r.video" [src]="r.videoSrc" controls></video>
+        <p>Ocjena: {{r.ocjena}}/10</p>
+        <p>{{r.sadrzaj}}</p>
+        <p>{{parseDate(r.datum_vrijeme) | date:'dd.M.yyyy. HH:mm'}}</p>
+        <p>Korisnik: {{r.korime}}</p>
+      </div>
+    </div>
+    </div>
+    
+    </div>

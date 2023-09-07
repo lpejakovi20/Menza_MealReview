@@ -1,0 +1,221 @@
+/* Reset default margin and padding */
+.container {
+    max-width: 1170px;
+    margin: 30px auto;
+      width: 100%;
+  }
+  
+  .glavniDio {
+      width: 830px;
+      height: auto;
+      background: transparent;
+      margin: auto;
+    margin-top: 60px;
+      border-radius: 10px;
+      overflow: hidden;
+  }
+  .lijeviDio {
+      width: 60%;
+      height: 320px;
+      float: left;
+      overflow: hidden;
+      background: transparent;
+  }
+  
+  .lijeviDio img {
+          width: 100%;
+          height: 100%;
+          border-radius: 10px 0 0 10px;
+          position: relative;
+      object-position: top center;
+      object-fit: cover;
+      }
+  
+  .desniDio {
+      width: 40%;
+      float: left;
+      background: #dfe2db;
+      height: 320px;
+      border-radius: 0 10px 10px 0;
+  }
+  
+  .desniDio h2 {
+          color: #010a10;
+          font-family: "Montserrat", sans-serif;
+          font-weight: 400;
+          text-align: left;
+          font-size: 40px;
+          margin: 50px 0 20px 0;
+          padding: 0 0 0 40px;
+          letter-spacing: 1px;
+      }
+  
+  .detalji ul {
+          list-style-type: none;
+          padding: 0 0 0 20px;
+          margin: 15% 0 0 0;
+      } 
+      
+  .detalji ul li {
+              display: block;
+              color: #010a10;
+              font-family: "Montserrat", sans-serif;
+              font-weight: 400;
+              font-size: 14px;
+              padding: 0 40px 0 0;
+        margin-top: 20px;
+  }
+  
+  .pregled-traka {
+      width: 100%;
+      padding: 10px 0px;
+      background-color: rgb(55,55,57);
+      border: 1px solid #161616;
+  }
+  
+  .pregled-traka h1 {
+      color: #dadada;
+      font-size: 1.3rem;
+      font-weight: 500;
+      padding-left: 20px;
+  }
+  
+  #otvoriPolje{
+    margin-top: 30px;
+    margin-bottom: 20px;
+    padding: 10px;
+  }
+  
+  form {
+    margin-top: 20px;
+    margin-bottom: 40px;
+  }
+  
+  .forma {
+      display: flex;
+      flex-direction: column;
+      align-items: left;
+      width: 40%;
+    }
+    
+    .forma form {
+      display: flex;
+      flex-direction: column;
+      align-items: left;
+    }
+    
+    .forma input[type="text"],
+    .forma textarea,
+    .forma input[type="file"],
+    .forma button,
+    .forma label{
+      width: 50%;
+      margin-bottom: 10px;
+    }
+  
+    .forma textarea {
+      height: 80px;
+      width: 100%;
+      resize: none;
+    }
+  
+    .odaberi-datoteku-label {
+      background-color: #f2f2f2;
+      padding: 8px 0px;
+    }
+    
+    .odaberi-datoteku-label:hover {
+      background-color: #e0e0e0;
+    }
+  
+    form #Pohrani {
+      width: 120px;
+      margin-left: 70%;
+      padding: 5px;
+    }
+  
+    .forma input[type="file"] {
+      color: #dadada;
+    }
+  
+  .naslov {
+    color: whitesmoke;
+  }
+  
+  /**/
+  
+  .recenzije {
+    margin-top: 30px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+  }
+  
+  .recenzije > div {
+    flex-basis: 100%;
+    max-width: 100%;
+  }
+  
+  .recenzije img,
+  .recenzije video {
+    max-width: 30%;
+    margin-right: 20px;
+  }
+  
+  .recenzije p {
+    margin-bottom: 10px;
+    color: whitesmoke;
+  }
+  
+  .recenzije > div::after {
+    content: "";
+    display: block;
+    height: 20px;
+    background-color: #ccc;
+    margin-top: 20px;
+  }
+  
+  /**/
+  
+  table {
+       border-spacing: 0;
+       border-collapse: collapse;
+       background-color: transparent;
+  }
+   td {
+       padding: 0;
+  }
+   th {
+       padding: 0;
+       text-align: center;
+     width: 250px;
+     max-width: 250px;
+  }
+  
+  .tablice {
+    width: 100%;
+    margin: auto;
+  }
+   .table {
+     margin: auto;
+       width: 60%;
+       margin-top: 3%;
+  }
+   .table td {
+       background-color: #fff !important;
+  }
+   .table th {
+       background-color: #fff !important;
+  }
+   .table > tbody > tr > th {
+       padding: 20px;
+       line-height: 1.4;
+       vertical-align: top;
+       border-top: 1px solid #ddd;
+  }
+   .table > tbody > tr > td {
+       padding: 8px;
+       line-height: 1.4;
+       vertical-align: top;
+       border-top: 1px solid #ddd;
+  }

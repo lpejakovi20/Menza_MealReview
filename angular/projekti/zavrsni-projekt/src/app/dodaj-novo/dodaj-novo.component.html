@@ -1,0 +1,45 @@
+<div class="container">
+  
+  <div class="pregled-traka donja-traka">
+    <h2 class="naslov">Novi meni</h2>
+    </div>
+  <div class="forma">
+    <form>
+      <input type="text" name="nazivMenija" id="nazivMenija" placeholder="naziv"/>
+      <textarea name="opisMenija" id="opisMenija" placeholder="sadržaj menija"></textarea>
+      <label for="imageInput" class="odaberi-sliku-label">Odaberi sliku</label>
+      <input type="file" id="imageInput" accept="image/*">
+      <button id="Pohrani" name="Pohrani" type="submit" value="Pohrani" (click)="PohraniMeni($event)">Pohrani</button><br>
+    </form> 
+  </div>
+  
+  <div class="pregled-traka">
+     <h2 class="naslov">Novi proizvod</h2>
+  </div>  
+  
+  <div class="pretrazivanjeDiv">
+      <label for="pretrazivanje">Pretraživanje:</label>
+      <input type="text" name="pretrazivanje" id="pretrazivanje" placeholder="Kljucne rijeci">
+      <button (click)="dohvatiJelaApi()">Pretraži</button>
+      <br>
+    </div>  
+  
+  <div>  
+    <table border="1px" class="table">
+      <tr><th>Slika</th><th>Naziv</th><th>Sastojci</th><th>Kalorije po porciji</th><th>Naziv za unos u bazu</th><th></th></tr>
+      <tr *ngFor="let i of items">
+        <td><img src={{i.recipe.image}} width='200' [alt]='i.recipe.label'/></td>  
+        <td style="width: 150px">{{i.recipe.label}}</td>
+          <td>
+            <p *ngFor="let s of i.recipe.ingredientLines">
+              {{s}}
+            </p>
+          </td>
+          <td>{{(zaokruziKalorije(i.recipe.calories / i.recipe.yield)) + " kcal"}}</td>
+          <td><input type="text" id={{dohvatiIdentifikator(i.recipe.uri)}} placeholder="naziv za unos u bazu"></td>
+          <td class="gumbi"><button (click)="dodajUbazu(i)">Dodaj u bazu</button></td>
+      </tr>
+    </table>
+  </div>
+  </div>
+  

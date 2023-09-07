@@ -1,0 +1,31 @@
+/* You can add global styles to this file, and also import other style files */
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; background-color: rgb(26, 26, 27); }
+
+html, body, app-root {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+  }
+  
+  app-root {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  main {
+    flex: 1 0 auto;
+  }
+  
+  footer {
+    flex-shrink: 0;
+    margin-top: auto;
+  }
+  
+  
+/*
+boje: 
+body -> rgb(26, 26, 27);
+form -> rgb(223, 223, 223);
+input -> rgb(223, 223, 223);
+*/

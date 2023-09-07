@@ -1,0 +1,19 @@
+<section id="meniji">
+    <div class="pregled-traka">
+        <h1>Meniji</h1>
+    </div>
+        <div class="container">
+            <div class="meni" *ngFor="let m of meniji">
+                <div class="slika">
+                    <img [id]="m.naziv" [src]="m.slikaSrc">
+                </div>
+                <div class="link">
+                    <a [routerLink]="['/detaljiMenija',m.id]" (click)="prikaziVise(m.id)">
+                        <span *ngFor="let s of m.stavkeMenija; let last = last">{{s}}
+                            <br *ngIf="!last">
+                        </span>
+                        </a>
+                </div>
+            </div>
+        </div>
+</section>

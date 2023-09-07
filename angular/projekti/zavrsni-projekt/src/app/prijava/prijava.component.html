@@ -1,0 +1,18 @@
+<div class="stranica">
+  <h2 class="naslov">Prijava</h2>
+  <div class="forma">
+    <form (ngSubmit)="onSubmit($event)">
+      <input id="korime" name="korime" type="text" placeholder="korime"/>
+      <input id="lozinka" name="lozinka" type="password" placeholder="lozinka"/>
+      <button mat-raised-button id="Salji" name="Salji" type="submit" value="Prijavi se" (click)="onSubmit($event)">Prijavi se</button><br>
+      <hr><br>
+      <p id="para">
+          [korime, lozinka] <br>
+          obican, 123456 <br>
+          admin, 123456
+      </p>
+    </form> 
+  </div>
+</div>
+  
+  

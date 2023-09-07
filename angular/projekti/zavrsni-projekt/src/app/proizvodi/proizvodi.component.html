@@ -1,0 +1,15 @@
+<section id="proizvodi">
+    <div class="pregled-traka">
+        <h1>Proizvodi</h1>
+    </div>
+        <div class="container">
+            <div class="proizvod" *ngFor="let p of proizvodi">
+                <div class="slika">
+                    <img [id]="p.naziv" [src]="p.slikaSrc">
+                </div>
+                <div class="link">
+                    <a [routerLink]="['/detaljiProizvoda',p.id]" (click)="prikaziVise(p.id)">{{p.naziv}}</a>
+                </div>
+            </div>
+        </div>
+</section>

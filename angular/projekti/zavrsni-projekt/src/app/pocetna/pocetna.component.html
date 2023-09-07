@@ -1,0 +1,33 @@
+<section id="pocetna">
+    <div class="naslov">
+        <h1>Meniji - {{getDate() | date:'d.M.yyyy.'}}</h1>
+    </div>
+    <div class="pregled-traka">
+        <h2>Ručak</h2>
+    </div>
+        <div class="container">
+            <div class="item" *ngFor="let r of rucak;let index = index">
+                <h3 *ngIf="index < 2">Meni br. {{index+1}}</h3>
+                <h3 *ngIf="index == 2">Vege Meni</h3>
+                <ul>
+                    <li *ngFor="let i of r">
+                        {{i}}<br>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="pregled-traka">
+            <h2>Večera</h2>
+        </div>
+        <div class="container">
+            <div class="item" *ngFor="let v of vecera;let index = index">
+                <h3 *ngIf="index < 2">Meni br. {{index+1}}</h3>
+                <h3 *ngIf="index == 2">Vege Meni</h3>
+                <ul>
+                    <li *ngFor="let i of v">
+                        {{i}}<br>
+                    </li>
+                </ul>
+            </div>
+        </div>
+</section>

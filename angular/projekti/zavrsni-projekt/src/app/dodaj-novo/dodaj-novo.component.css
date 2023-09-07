@@ -1,0 +1,137 @@
+.pregled-traka {
+	width: 100%;
+	padding: 10px 0px;
+	background-color: rgb(55,55,57);
+	border: 1px solid #161616;
+}
+
+.pregled-traka h2 {
+    color: #dadada;
+    font-size: 1.3rem;
+    font-weight: 500;
+    padding-left: 20px;
+}
+
+.pretrazivanjeDiv{
+  margin-top: 30px;
+  margin-bottom: 20px;
+}
+
+table {
+	 border-spacing: 0;
+	 border-collapse: collapse;
+	 background-color: transparent;
+	 float: left;
+}
+ td {
+	 padding: 0;
+}
+ th {
+	 padding: 0;
+	 text-align: center;
+}
+ .table {
+	 width: 100%;
+	 max-width: 100%;
+	 margin-bottom: 10%;
+   margin-left: auto;
+   margin-right: auto;
+}
+ .table td {
+	 background-color: #fff !important;
+	 min-width: 10px;
+}
+ .table th {
+	 background-color: #fff !important;
+	 min-width: 100px;
+}
+ .table > tbody > tr > th {
+	 padding: 20px;
+	 line-height: 1.4;
+	 vertical-align: top;
+	 border-top: 1px solid #ddd;
+}
+ .table > tbody > tr > td {
+	 padding: 8px;
+	 line-height: 1.4;
+	 vertical-align: top;
+	 border-top: 1px solid #ddd;
+}
+ .container {
+   align-items: center;
+	 width: 80%;
+	 margin: auto;
+   margin-top: 50px;
+}
+
+.gumbi {
+  text-align: center;
+}
+
+.gumbi button {
+  padding: 4px;
+}
+
+form {
+  margin-top: 40px;
+  margin-bottom: 40px;
+}
+
+.forma {
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+    width: 20%;
+  }
+  
+  .forma form {
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+  }
+  
+  .forma input[type="text"],
+  .forma textarea,
+  .forma input[type="file"],
+  .forma button,
+  .forma label{
+    margin-bottom: 10px;
+  }
+
+  .forma textarea {
+    height: 80px;
+  }
+
+  .odaberi-sliku-label {
+    background-color: #f2f2f2;
+    padding: 8px 0px;
+  }
+  
+  .odaberi-sliku-label:hover {
+    background-color: #e0e0e0;
+  }
+
+  form button {
+    width: 30%;
+    margin-top: 5px;
+    margin-left: 70%;
+    padding: 5px;
+  }
+
+  .forma input[type="file"] {
+    color: #dadada;
+  }
+
+  .pretrazivanjeDiv label {
+    color: #dadada;
+    margin-right: 15px;
+  }
+
+.pretrazivanjeDiv button {
+  margin-left: 10px;
+  padding: 5px;
+}
+
+.naslov {
+  color: whitesmoke;
+}

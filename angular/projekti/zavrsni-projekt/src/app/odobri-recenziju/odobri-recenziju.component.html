@@ -1,0 +1,40 @@
+<div class="container">
+  <div>
+    <div class="pregled-traka">
+      <h1>Recenzije menija</h1>
+    </div>
+      <div class="recenzije">
+      <div *ngFor="let r of recenzijeMeniji">
+        <img *ngIf="r.slika" [id]="r.slika" [src]="r.slikaSrc">
+        <video *ngIf="r.video" [id]="r.video" [src]="r.videoSrc" controls></video>
+        <p>Ocjena: {{r.ocjena}}/10</p>
+        <p>{{r.sadrzaj}}</p>
+        <p>{{parseDate(r.datum_vrijeme) | date:'dd.M.yyyy HH:mm'}}</p>
+        <p>korisnik: {{r.korime}}</p>
+        <div class="gumbi">
+        <button id="Odobri" name="Odobri" type="submit" value="Odobri" (click)="odobri(r.id,'meni')">Odobri</button>
+        <button id="Ukloni" name="Ukloni" type="submit" value="Ukloni" (click)="ukloni(r.id,'meni')">Ukloni</button><br>
+        </div>
+      </div>
+      </div>
+  </div>
+  <div>
+    <div class="pregled-traka">
+      <h1>Recenzije proizvoda</h1>
+    </div>
+    <div class="recenzije">
+      <div *ngFor="let r of recenzijeProizvodi">
+        <img *ngIf="r.slika" [id]="r.slika" [src]="r.slikaSrc">
+        <video *ngIf="r.video" [id]="r.video" [src]="r.videoSrc" controls></video>
+        <p>Ocjena: {{r.ocjena}}/10</p>
+        <p>{{r.sadrzaj}}</p>
+        <p>{{parseDate(r.datum_vrijeme) | date:'dd.M.yyyy HH:mm'}}</p>
+        <p>korisnik: {{r.korime}}</p>
+        <div class="gumbi">
+        <button id="Odobri" name="Odobri" type="submit" value="Odobri" (click)="odobri(r.id,'proizvod')">Odobri</button>
+        <button id="Ukloni" name="Ukloni" type="submit" value="Ukloni" (click)="ukloni(r.id,'proizvod')">Ukloni</button><br>
+      </div>
+      </div>
+      </div>
+  </div>
+  </div>

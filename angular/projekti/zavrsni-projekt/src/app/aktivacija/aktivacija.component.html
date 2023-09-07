@@ -1,0 +1,18 @@
+<div class="container">
+  <div class="pregled-traka">
+    <h2>Neaktivirani korisnički računi</h2>
+  </div>
+    <table class="table" border="1px">
+      <tr><th>Ime</th><th>Prezime</th><th>Korisničko ime</th><th>E-mail</th><th>Opcije</th></tr>
+      <tr *ngFor="let k of korisnici">
+        <td>{{k.ime}}</td>
+        <td>{{k.prezime}}</td>
+        <td>{{k.korime}}</td>
+        <td>{{k.email}}</td>
+        <td class="gumbi">
+        <button (click)="aktivirajKorisnika(k.id)">Aktiviraj</button> &nbsp; 
+        <button (click)="obrisiKorisnika(k.id)">Ukloni</button>
+        </td>
+      </tr>
+  </table><br>
+</div>
